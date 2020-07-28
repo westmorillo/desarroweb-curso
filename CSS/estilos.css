@@ -9,7 +9,7 @@ selectores*/
 
 .menu-nav {
     list-style-type: none;
-    display: inline-block;
+    /* display: flex; */
     text-decoration: none;
     height: inherit;
 
@@ -80,6 +80,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .hero-image {
@@ -100,6 +101,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
     
 }
 
@@ -118,8 +120,16 @@ h2 {
     margin: 10px 0;
 }
 .project-details {
-    width: 500px;
+    width: 50%;
     flex-shrink: inherit;
+}
+.project-imageContainer {
+    height: auto;
+    width: 50%;
+}
+
+.project-image {
+    width: 100%;
 }
 
 .event-list {
@@ -168,6 +178,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     height: 90px;
+    flex-wrap: wrap;
 }
 .header ol li {
     height: inherit;
@@ -190,6 +201,7 @@ h2 {
     padding: 30px;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 /* .social {
@@ -255,6 +267,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .footer-image {
@@ -269,11 +282,78 @@ h2 {
 }
 
 .container {
+    max-width: 1000px;
     display: inherit;
+    flex: 1;
     align-items: inherit;
     justify-content: inherit;
     margin: 0 auto;
-    width: 1000px;
+    /* width: 1000px; */
     height: inherit;
     flex-wrap: inherit;
+}
+
+/* desktop first comenzar desde el MQ mas grande */
+
+@media screen and (max-width:1024px) {
+
+}
+
+@media screen and (max-width: 767px){
+    .header{
+        display: block;
+        height: auto;
+    }
+    .header ol {
+        display: block;
+    }
+    .header ol li {
+        height: 50px;
+        text-align: center;
+    }
+    .header a {
+        justify-content: center;
+    }
+    .header .logo {
+        text-align: center;
+    }
+    
+    .project {
+        display: block;
+    }
+    .project-imageContainer {
+        width: auto;
+    }
+    .project-imageContainer img {
+        max-width: auto;
+    }
+    .project-details {
+        width: auto;
+        font-size: 16px;
+    }
+    .project-tittle {
+        font-size: 1.5em;
+    }
+    .project-url {
+        font-size: 1em;
+    }
+    .project-date {
+        font-size: 1em;
+    }
+    .project-course {
+        font-size: 1.2em;
+    }
+    .project-description {
+        font-size: .8em;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .project-details {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    
 }
