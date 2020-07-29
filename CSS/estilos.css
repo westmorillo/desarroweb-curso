@@ -140,8 +140,8 @@ h2 {
     margin: 20px;
 }
 .event {
-    margin: 10px;
-    width: 480px;
+    margin: 1%;
+    width: 48%;
     flex-shrink: 0;
     border-radius: 20px;
     overflow: hidden;
@@ -296,10 +296,48 @@ h2 {
 /* desktop first comenzar desde el MQ mas grande */
 
 @media screen and (max-width:1024px) {
-
+    .youtube-video {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .flexible-video {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: 56.25%;
+    }
+    .container {
+        padding: 0 1em;
+    }
+    .hero {
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        padding: 2em;
+    }
+    .hero-image {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    h1 {
+        font-size: 2em;
+        position: relative;
+        z-index: 2;
 }
 
 @media screen and (max-width: 767px){
+    
+    }
     .header{
         display: block;
         height: auto;
@@ -346,14 +384,61 @@ h2 {
     .project-description {
         font-size: .8em;
     }
+    .event {
+        width: auto;
+        flex-shrink: initial;
+    }
+    .event img {
+        width: 100%;
+    }
+    .contact {
+        height: auto;
+        text-align: center;
+        display: block;
+    }
 }
 
 @media screen and (max-width:480px) {
     .project-details {
         font-size: 12px;
     }
+    .event-detail {
+        margin: -2em 1em 2em;
+        border-radius: 2px;
+    }
+    .contact {
+        height: auto;
+        text-align: center;
+        display: block;
+    }
+    .form-email button {
+        padding: 1em 2em;
+        margin-top: 1.5em;
+    }
+    .footer {
+        display: block;
+        text-align: center;
+        border: 1px solid transparent;
+        
+    }
 }
 
 @media screen and (max-width:320px) {
+    .container {
+        position: relative;
+    }
+    h1 {
+        font-size: 1.5em;
+        line-height: initial;
+        padding: 0.5em;
+        background: rgba(0, 0, 0, .5);
+    }
+    .hero {
+        padding: 1em 0;
+        height: auto;
+    }
+    .logo img {
+        width: 100%;
     
+    }
 }
