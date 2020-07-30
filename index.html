@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=divice-width, initial-scale=1">
 </head>
 <body>
-    <i class="icon-menu-"></i>
+    <i class="icon-menu- burger-button" id="burger-menu"></i>
     <header class="header">
         <div class="container">
             <figure class="logo">
@@ -123,10 +123,10 @@
                 <button>Enviar</button>
             </form>
             <div class="social">
-                <a href="https://twitter.com" class="icon-twitter"></a>
-                <a href="https://facebook.com" class="social-link facebook"></a>
-                <a href="https://github.com" class="social-link github"></a>
-                <a href="https://instagram.com" class="social-link instagram"></a>
+                <a href="https://twitter.com" class="social-link icon-twitter"></a>
+                <a href="https://facebook.com" class="social-link icon-facebook"></a>
+                <a href="https://github.com" class="social-link icon-github"></a>
+                <a href="https://instagram.com" class="social-link icon-instagram"></a>
             </div>
         </div>
     </section>
@@ -139,7 +139,21 @@
                 <p>Designed with love <a href="twitter.com">twitter</a> </p>
             </div>
         </div>
-    </footer> --> -->
+    </footer>
+    <script>
+        const menu = document.querySelector('.menu-nav')
+        const burgerButton = document.querySelector('#burger-menu')
+        burgerButton.addEventListener('click', hideshow)
+
+        function hideshow () {
+            if (menu.classList.contains('is-active')) {
+                menu.classList.remove('is-active');
+            }
+            else {
+            menu.classList.add('is-active');
+            }
+        }
+    </script>
 </body>
 
 </html>
