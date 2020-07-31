@@ -141,9 +141,20 @@
         </div>
     </footer>
     <script>
+        const ipad = window.matchMedia('screen and (max-width: 767px)')
         const menu = document.querySelector('.menu-nav')
         const burgerButton = document.querySelector('#burger-menu')
-        burgerButton.addEventListener('click', hideshow)
+       
+        ipad.addListener(validation)
+        validation(ipad)
+        function validation(event) {
+            if (event.matches) {
+                burgerButton.addEventListener('click', hideshow)
+            }
+            else {
+                burgerButton.removeEventListener('click', hideshow)
+            }
+        }
 
         function hideshow () {
             if (menu.classList.contains('is-active')) {
