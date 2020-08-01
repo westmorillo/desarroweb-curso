@@ -139,7 +139,7 @@ h1 strong {
 h2 {
    color: blue; 
    text-transform: uppercase;
-   font-family: 'Courier New', Courier, monospace; 
+   font-family: Arial, Helvetica, sans-serif, Courier, monospace; 
    font-weight: bold;   
    font-size: 25px;
    margin-bottom: 40px;
@@ -172,7 +172,7 @@ h2 {
     border: 2px solid rebeccapurple;
     padding: 20px;
     border-radius: 10px;
-    background-color: seashell;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -388,7 +388,7 @@ h2 {
 
 /* desktop first comenzar desde el MQ mas grande */
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1023px) {
     .youtube-video {
         position: absolute;
         top: 0;
@@ -431,6 +431,10 @@ h2 {
 }
 
 @media screen and (max-width: 767px){
+    h2 {
+        font-size: 1.2em;
+        margin: .5em 0 ;
+    }
     .burger-button {
         display: block;
     }
@@ -519,8 +523,11 @@ h2 {
 }
 
 @media screen and (max-width:480px) {
+    .portafolio {
+        padding: 5px;
+    }
     .project-details {
-        font-size: 12px;
+        font-size: 15px;
     }
     .event-detail {
         margin: -2em 1em 2em;
@@ -560,5 +567,13 @@ h2 {
     .logo img {
         width: 100%;
     
+    }
+    .contact {
+        padding: 10px;
+    }
+    .social-link {
+        width: 30px;
+        height: 30px;
+        background-size: 100%;
     }
 }
